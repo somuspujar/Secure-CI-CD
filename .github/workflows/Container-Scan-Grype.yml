@@ -1,0 +1,28 @@
+name: container-scan-grype
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  Container-Scanning:
+ 
+    runs-on: ubuntu-latest
+
+    steps:
+
+# ~~~~~~~~~~~~~~~~~~~ Dumping Code ~~~~~~~~~~~~~~~~~~~
+
+      - name: Dumping Source Code
+        uses: actions/checkout@v3
+
+# ~~~~~~~~~~~~~~~~~~~ Secret Scanning ~~~~~~~~~~~~~~~~~~~
+
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t vulnerable-nodejs-app:v1 .
+          
+      - name: Scan image
+        uses: anchore/scan-action@v3
+        with:
+          image: "vulnerable-nodejs-app:v1"
