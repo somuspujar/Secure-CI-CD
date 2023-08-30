@@ -1,4 +1,4 @@
-name: secrets-sca-using-shiftleft
+name: test-scan
 
 on:
   workflow_dispatch:
