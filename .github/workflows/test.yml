@@ -13,23 +13,12 @@ jobs:
 
       - name: Dumping Source Code
         uses: actions/checkout@v3
-
-#~~~~~~~~~~ Installing Dependencies ~~~~~~~~~~
-
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14.x'
-      
-      - name: Install dependencies
-        run: npm install
-
 #~~~~~~~~~~ Running Dependency Scan ~~~~~~~~~~
         
       - name: Dependency Scan
         uses: ShiftLeftSecurity/scan-action@master
         with:
-          type: "credscan,nodejs,depscan"
+          type: "credscan,nodejs"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
