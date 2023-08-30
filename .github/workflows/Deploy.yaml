@@ -30,5 +30,8 @@ jobs:
               git clone https://github.com/Hack-with-8k0b/Vulnerable-Nodejs-App.git
               ls
               cd Vulnerable-Nodejs-App
-              ls -la 
+              ls -la
+              sudo docker-compose up --build -d
+              docker images
+              sudo docker-compose up -d
               '
