@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  njsscan:
+  SAST:
   
     runs-on: ubuntu-latest
     
