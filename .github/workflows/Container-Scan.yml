@@ -5,7 +5,7 @@ on:
 
 jobs:
 
-  Secrets:
+  Container-Scanning:
  
     runs-on: ubuntu-latest
 
