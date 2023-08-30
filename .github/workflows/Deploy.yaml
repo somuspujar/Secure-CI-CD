@@ -24,6 +24,7 @@ jobs:
               # Now we have got the access of EC2 and we will start the deploy .
               cd /home/ubuntu
               ls
+              rm -rf Vulnerable-Nodejs-App/
               git clone https://github.com/Hack-with-8k0b/Vulnerable-Nodejs-App.git
               ls
               cd Vulnerable-Nodejs-App
