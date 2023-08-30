@@ -30,6 +30,6 @@ jobs:
               cd Vulnerable-Nodejs-App
               ls -la
               sudo docker-compose up --build -d
-              docker images
+              sudo docker images
               sudo docker-compose up -d
               '
