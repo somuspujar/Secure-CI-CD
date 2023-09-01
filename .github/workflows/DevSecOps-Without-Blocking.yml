@@ -1,4 +1,4 @@
-name: Complete-DevSecOps-Pipeline
+name: Complete-DevSecOps-Pipeline-Without-Blocking
 
 on:
   workflow_dispatch:
